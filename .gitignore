@@ -1,0 +1,11 @@
+syntax:glob
+
+*.pyc
+*.c
+*.o
+*.dll
+Results/*
+pyresults/*
+*.png
+*.tmp
+*.pickle

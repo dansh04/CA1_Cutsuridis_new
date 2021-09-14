@@ -1,0 +1,31 @@
+Parameters:
+1. calthresh=0.01
+2. avgcalthresh=0.01
+3. spikethresh
+4. weights
+5. stepby
+
+To-Do List:
+1. Run more simulations at different magnesium concentrations
+2. Change the graphing interface to R
+
+Anaconda Commands:
+mpiexec -n 8 python main.py "mg_0.0" 0.0
+mpiexec -n 8 python main.py "mg_0.5" 0.5
+mpiexec -n 8 python main.py "mg_1.0" 1.0
+mpiexec -n 8 python main.py "mg_2.0" 2.0
+
+10 Hz = 10 spikes / 1 sec = 10 spikes / 1000 ms = 3 spike / 100 ms
+
+Graphs:
+1. Mg concentration vs. Ca current
+2. Mg concentration vs. Membrane potential
+3. Mg concentration vs. Dead cells
+4. Mg concentration vs. Dead time
+
+Results:
+1. AnotherStepBy=1, LTP=0.00001, LTD=0.000008
+2. Same except spikethresh=3-->4, StepBy=50-->30
+3. Same except AnotherStepBy=1-->10, LTP=0.00001-->0.0001, 
+   LTD=0.000008-->0.00008, StepBy=30-->5, h.t-100-->80
+4. Same except LTP=0.0001-->0.00011
