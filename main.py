@@ -57,6 +57,8 @@ calthresh = 0.01
 avgcalthresh = 0.01
 spikethresh = 4
 mgconc = 2.0
+weight = 65
+ketaminePerWeight = 0.0
 
 # Check for parameters being passed in via the command line
 argadd = 1
@@ -71,12 +73,9 @@ if len(sys.argv)>(startlen):
     simname = sys.argv[startlen]
     if len(sys.argv)>(argadd+startlen):
         mgconc = float(sys.argv[argadd+startlen])
-        if len(sys.argv)>(2*argadd+startlen):
-            electrostim = float(sys.argv[2*argadd+startlen])
-            if len(sys.argv)>(3*argadd+startlen):
-                numCycles = int(sys.argv[3*argadd+startlen])
-                if len(sys.argv)>(4*argadd+startlen):
-                    connect_random_low_start_ = float(sys.argv[4*argadd+startlen])
+        if len(sys.argv)>(argadd+startlen+str(mgconc)):
+            ketaminePerWeight = float(sys.argv[argadd+startlen+str(mgconc)])
+            
                         
 rmchars=['"',"'","\\"," "]
 
