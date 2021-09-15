@@ -5,7 +5,7 @@ TITLE nmda synapse
 NEURON {
 	POINT_PROCESS NMDA2
 	NONSPECIFIC_CURRENT i
-    RANGE gmax, enmda, eca, onset, tauF, tauS, mg, pnmda, pca, alpha, beta, T, v, gnmda, i, B
+    RANGE gmax, enmda, eca, onset, tauF, tauS, mg, pnmda, pca, alpha, beta, T, v, gnmda, i, B, ketamine
 }
 
 UNITS {
@@ -23,6 +23,7 @@ PARAMETER {
    tauF = 9       (ms)
    tauS = 90      (ms)
    mg = 1         (mM)
+   ketamine = 0.3   
    alpha = 0.072  <0,1e4>         
 	beta = 0.0066
 	T = 1

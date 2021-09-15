@@ -22,10 +22,11 @@ class modelcell():
 
 class PyramidalCell(modelcell):
     """ Pyramidal Cell definition """
-    def __init__(self, gid = -1, mgconc = 1):
+    def __init__(self, gid = -1, mgconc = 1, ketaminePerWeight = 0):
         super().__init__()
         self.gid = gid
         self.mgconc = mgconc
+        self.ketaminePerWeight = ketaminePerWeight
         self.list_syns = []
         self.create_sections() 
         self.build_topology()
@@ -542,6 +543,7 @@ class PyramidalCell(modelcell):
         self.pre_list.append(syn_)    # NMDA        CA3 Shaffer collateral
         syn_.gmax = 0.00065
         syn_.mg = self.mgconc
+        syn_.ketamine = self.ketaminePerWeight
         # syn_.tcon = 2.3    
         # syn_.tcoff = 100
         # syn_.gNMDAmax = 1    # use connection weight to determine max cond

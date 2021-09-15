@@ -106,7 +106,8 @@ params = {"simname":simname,
           "scaleEScon": scaleEScon,
           "electrostim": electrostim,
           "percentDeath": percentDeath,
-          "mgconc": mgconc}
+          "mgconc": mgconc,
+          "ketaminePerWeight": ketaminePerWeight}
 
 with open('pyresults/' + simname + '.pickle', 'wb') as f:
     pickle.dump(params, f, pickle.HIGHEST_PROTOCOL)
@@ -184,6 +185,7 @@ for pop in poplist:
             exec("newcell = cellClasses."+pop.classtype+ "(int("+str(j)+"))")
             if (j < 100*network_scale):
                 newcell.mgconc = mgconc
+                newcell.ketaminePerWeight = ketaminePerWeight
                 newcell.addSynapses()
             if (pop.isart==1):
                 newcell.stim.gid = int(j)
