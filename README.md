@@ -49,5 +49,5 @@ This program is configured to produce the results presented in figures 9 and 10 
 We have been informed of a bug in the IA mod file, used for the OLM interneuron first introduced in ModelDB ac. 28316. Simulations (those for Figs.9 and 10) were thus rerun with the bug fixed. There are small quantitative differences from the published results, but the model still works as described. To reproduce the published results, comment out the "rates(v)" line in the DERIVATIVE block of IA.mod.*
 
 *__Note: Edits, 2021 Aug - present:__
-Added NMDA2.mod, working on adding few more mod files and better representations of memory network affected by Alzheimer's Disease based on different concentrations of Magnesium.*
+Added NMDA2.mod, working on adding few more mod files and better representations of memory network affected by Alzheimer's Disease based on different concentrations of Magnesium.(Through RISE 2021 Practicum research team and additional research, Jungmin Shinn*
 
