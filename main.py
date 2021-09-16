@@ -73,9 +73,14 @@ if len(sys.argv)>(startlen):
     simname = sys.argv[startlen]
     if len(sys.argv)>(argadd+startlen):
         mgconc = float(sys.argv[argadd+startlen])
-        if len(sys.argv)>(argadd+startlen+str(mgconc)):
-            ketaminePerWeight = float(sys.argv[argadd+startlen+str(mgconc)])
-            
+        if len(sys.argv)>(argadd+startlen+len(str(mgconc))):
+            Anotherinput = float(sys.argv[argadd+startlen+len(str(mgconc))])
+            if len(sys.argv)>(2*argadd+startlen):
+                electrostim = float(sys.argv[2*argadd+startlen])
+                if len(sys.argv)>(3*argadd+startlen):
+                    numCycles = int(sys.argv[3*argadd+startlen])
+                    if len(sys.argv)>(4*argadd+startlen):
+                        connect_random_low_start_ = float(sys.argv[4*argadd+startlen])
                         
 rmchars=['"',"'","\\"," "]
 
@@ -607,9 +612,9 @@ if perf is not None:
 # PLOT RESULTS
 #################
 
-# import plotfcns as pf
+import plotfcns as pf
 
-# pf.plotresults(params)
+pf.plotresults(params)
 
     # if 'cells' in locals():
     #     netfcns.spikeplot(cells,h.tstop,ntot)
